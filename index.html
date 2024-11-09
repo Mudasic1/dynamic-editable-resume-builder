@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Dynamic Resume Builder</h1>
+
+        <!-- Input form for the resume -->
+        <form id="resumeForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" placeholder="Enter your title" required>
+
+            <label for="about">About Me:</label>
+            <textarea id="about" placeholder="Write about yourself" required></textarea>
+
+            <label for="experience">Experience (separate by commas):</label>
+            <textarea id="experience" placeholder="Enter your work experiences" required></textarea>
+
+            <label for="skills">Skills (separate by commas):</label>
+            <input type="text" id="skills" placeholder="Enter your skills" required>
+
+            <button type="button" id="updateResumeBtn">Update Resume</button>
+        </form>
+
+        <!-- Button to show/hide resume -->
+        <button id="toggleResumeBtn">Hide Resume</button>
+
+        <!-- Resume display section -->
+        <div id="resume" class="resume">
+            <header>
+                <h1 id="displayName">Your Name</h1>
+                <p id="displayTitle">Your Title</p>
+            </header>
+            
+            <section class="about">
+                <h2>About Me</h2>
+                <p id="displayAbout">Your description goes here...</p>
+            </section>
+            
+            <section class="experience">
+                <h2>Experience</h2>
+                <ul id="displayExperience">
+                    <li>Your work experience</li>
+                </ul>
+            </section>
+            
+            <section class="skills">
+                <h2>Skills</h2>
+                <ul id="displaySkills">
+                    <li>Your skills</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+    <button id="downloadResumePdfBtn" style="padding: 30px; border-radius: 8px; border: none; position: relative; left: 42%; top: 25px;">Download Resume as PDF</button>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
